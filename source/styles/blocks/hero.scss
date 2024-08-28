@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  background-image:
+    linear-gradient(to right, $bg-second-2, $bg-second-2),
+    url("../../images/hero-bg-mobile@1x.webp"),
+    linear-gradient(to right, #515358, #444348 30%);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: auto 302px, 320px 302px, auto 302px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(to right, $bg-second-2, $bg-second-2),
+      url("../../images/hero-bg-mobile@2x.webp"),
+      linear-gradient(to right, #515358, #444348 30%);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 52px;
+  }
+}
+
+.hero__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 420px;
+    margin-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 85px;
+    margin-left: 80px;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: $font-secondary;
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 400;
+  text-align: center;
+  color: $text-color-accent;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: 60px;
+    color: $text-color-base-2;
+    text-align: left;
+  }
+}
+
+.hero__slogan {
+  margin: 0;
+  margin-bottom: 302px;
+
+  font-family: $font-secondary;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-color-accent;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    color: $text-color-base-2;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  right: 0;
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+
+    margin: 0;
+    margin-top: -85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+    margin-left: -163px;
+  }
+}
+
+.hero__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+  }
+}

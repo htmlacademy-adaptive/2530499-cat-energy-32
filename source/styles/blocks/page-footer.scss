@@ -1,0 +1,117 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: $bg-basic-2;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.page-footer__logo {
+  width: 128px;
+  height: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.page-footer__line {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__social {
+  margin-top: 2px;
+  margin-bottom: 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 212px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 143px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 340px;
+    margin-left: 398px;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: 2px;
+
+  color: inherit;
+  font-size: 16px;
+  line-height: 125%;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &::after {
+    flex-shrink: 0;
+
+    content: "";
+
+    width: 27px;
+    height: 34px;
+
+    background-color: $icon-bg;
+    mask-image: url("../../icons/stack.svg#logo-academy");
+    mask-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $icon-bg-hover;
+  }
+
+  &:active::after {
+    background-color: $icon-bg-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-left: auto;
+    margin-top: 0;
+
+    &::after {
+      margin-left: 23px;
+    }
+  }
+}

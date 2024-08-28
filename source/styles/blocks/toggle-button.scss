@@ -1,0 +1,50 @@
+.toggle-button {
+  position: relative;
+
+  width: 26px;
+  height: 24px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 3px;
+
+  height: 2px;
+  width: 26px;
+
+
+  background-color: $text-color-base-2;
+  box-shadow: 0 8px 0 0 $text-color-base-2, 0 16px 0 0 $text-color-base-2;
+}
+
+.toggle-button--opened::before,
+.toggle-button--opened::after {
+  content: "";
+
+  position: absolute;
+  top: 11px;
+  left: 0;
+
+  width: 25px;
+  height: 2px;
+}
+
+.toggle-button--opened::before {
+  left: 4px;
+  box-shadow: none;
+  transform: rotate(47deg);
+}
+
+.toggle-button--opened::after {
+  left: 4px;
+  background-color: $text-color-base-2;
+  transform: rotate(-45deg);
+}

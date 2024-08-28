@@ -1,0 +1,70 @@
+.page {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $text-color-base;
+}
+
+.page--theme-promo {
+  @media (min-width: $desktop-width) {
+    background-image:
+      linear-gradient(to right, $bg-basic-1 0%, $bg-basic-1 50%, $bg-second-2 50%),
+      linear-gradient(to right, transparent 0%, transparent 50%, #403f43 50%),
+      url("../../images/hero-bg-desktop@1x.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 694px, 100% 694px, 1040px 694px;
+    background-position: left calc(50%) top 0, left calc(50% + 1040px) top 0, left calc(50% + 520px) top 0;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(to right, $bg-basic-1 0%, $bg-basic-1 50%, $bg-second-2 50%),
+        linear-gradient(to right, transparent 0%, transparent 50%, #403f43 50%),
+        url("../../images/hero-bg-desktop@2x.webp");
+    }
+  }
+}
+
+.page__headline {
+  box-sizing: border-box;
+
+  width: 320px;
+  padding: 27px 20px 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-top: 1px solid $border-base;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+
+    padding: 40px 30px 94px;
+
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 49px;
+  }
+}
+
+.page__title {
+  margin: 0;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: $text-color-base-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}

@@ -1,0 +1,33 @@
+.input {
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $input-text;
+
+  border: 1px solid $input-border;
+  outline: none;
+
+  &::placeholder {
+    color: $input-text;
+  }
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus {
+    padding: 9px 19px;
+
+    border-width: 2px;
+    border-color: $input-border-focus;
+  }
+
+  &--danger {
+    border-color: $input-border-error;
+  }
+}

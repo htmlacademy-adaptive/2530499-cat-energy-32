@@ -1,0 +1,62 @@
+.button {
+  box-sizing: border-box;
+
+  display: inline-block;
+
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  text-align: center;
+
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.button[disabled] {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.button--primary {
+  color: $button-text-primary;
+
+  background-color: $button-bg-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $button-bg-primary-hover;
+  }
+
+  &:active {
+    color: $button-text-primary-active;
+
+    background-color: $button-bg-primary-hover;
+  }
+}
+
+.button--secondary {
+  color: $button-text-secondary;
+  background-color: $button-bg-secondary;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $button-bg-secondary-hover;
+  }
+}
+
+.button--size-s {
+  padding: 10px 15px;
+
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.button--size-m {
+  padding: 15px;
+
+  font-size: 20px;
+  line-height: 130%;
+}

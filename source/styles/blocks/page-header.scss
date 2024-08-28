@@ -1,0 +1,8 @@
+.page-header {
+  position: relative;
+  z-index: 5;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+  }
+}

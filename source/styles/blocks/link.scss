@@ -1,0 +1,41 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-color-base-2;
+
+  text-decoration: none;
+
+  &:hover::after,
+  &:focus::after {
+    width: 32px;
+
+    background-size: 32px 12px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+
+    font-size: 20px;
+  }
+}
