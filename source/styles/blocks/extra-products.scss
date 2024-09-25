@@ -58,12 +58,12 @@
 .extra-products__item {
   border-bottom: 1px solid $border-third;
 
-  &:first-of-type {
+  &:first-child {
     border-top: 1px solid $border-third;
   }
 
   @media (min-width: $tablet-width) {
-    &:first-of-type {
+    &:first-child {
       border-top: none;
     }
 
@@ -73,6 +73,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    &:first-child {
+      border-top: 1px solid $border-third;
+    }
+
     &:last-of-type {
       border-bottom: 1px solid $border-third;
     }
